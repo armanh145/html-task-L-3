@@ -2,173 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIORGIO ARMANI</title>
-  <link rel="icon" href="giorgio armani.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor Appointment</title>
+  <link rel="icon" href="logo.png" type="logo">
   <style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #ebeaea;
-  margin: 0;
-  padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ba1b06; /* red */
+      padding: 10px 20px;
+    }
 
-/* Header Styling */
-header {
-  background-color: #004080;
-  color: #ffffff;
-  padding: 10px;
-}
+    .logo img {
+        height: 70px;
+        width: auto;
+    }
 
-nav {
-  padding: 0px;
-}
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-nav ul {
-  background-color: #004080;
-  list-style-type: none;
-  display: flex;
-  margin: 0px;
-  padding: 0;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
 
-nav li {
-    list-style: none;
-    color: #ffffff;
-}
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: 0.3s ease;
+    }
 
-nav li a {
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0px 10px;
-    color: white;
-    text-decoration: none;
-}
+    .nav-links li a:hover {
+      background-color: white;
+      color: #ba1b06;
+      border-radius: 5px;
+    }
 
-/* Main Content */
-main {
-  padding: 20px;
-}
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ba1b06;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #bd3624;
+      margin-bottom: 30px;
+    }
+    .hero form {
+      background-color: #fff;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .hero form input {
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .hero button {
+        background-color: #ba1b06;
+        color: white;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        border-color: #f4f4f4;
+        padding: 3px;
+    }
 
-.container {
-  border: 2px solid #004080;
-  padding: 10px;
-  border-radius: 8px;         
-  background-color: #f9f9f9;
-}
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #e9f5ff;
+    }
+    .services h2 {
+      font-size: 2em;
+      color: #ba1b06;
+      margin-bottom: 10px;
+    }
+    .services p {
+      font-size: 1em;
+      color: #bd3624;
+      margin-bottom: 30px;
+    }
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background-color: #d0eaff;
+      width: 250px;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      color: #ba1b06;  
+      margin-bottom: 5px;
+    }
+    .card p {
+      color: #bd3624;  
+      margin: 5px 0;
+    }
 
-/* Recent Articles Section */
-
-.article-item {
-  margin-bottom: 15px;
-}
-
-.recent-article {
-  border: 2px solid #004080;
-  padding: 20px; 
-  margin: 10px auto;    
-  border-radius: 8px;         
-  background-color: #f9f9f9;
-  flex-wrap: wrap;
-}
-
-
-/* Footer Styling */
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  margin-top: 30px;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover,
-footer a:focus {
-    color: #fff;
-    text-decoration: underline;
-}
+    footer {
+      background-color:  #ba1b06;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1>GIORGIO ARMANI</h1>
-    <nav>
-        <div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Recent Articles</a></li>
-          <li><a href="#">Email</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Links</a></li>
-          <li><a href="#">Contact us</a></li>
-        </ul>
-        </div>
-    </nav>
-  </header>
-
-  <!-- Main Content Section -->
-  <main>
-    <section>
-    <div class="container">
-      <h2>Welcome to Our Website!</h2>
-      <p>Giorgio Armani is an Italian fashion designer best known for his menswear, particularly his suits, and for pioneering a relaxed yet elegant style that redefined both men's and women's fashion. He founded his eponymous label in 1975 and has since expanded it into a global empire encompassing ready-to-wear, haute couture, accessories, and more.</p>
-      <ul>
-        <li>clothes (mens and women)</li>
-        <li>makeup</li>
-      </ul>
-    </div>  
-    </section>
-
-    <!-- Recent Articles Section -->
-    <section>
-        <div class="recent-article">
-          <h2>Founding the Brand:</h2>
-          <p>He launched his label with friend and business partner Sergio Galeotti, focusing on ready-to-wear for both men and women. <a href="#">Read more</a></p>
-        </div>
-        <div class="recent-article">
-          <h2>Signature Style:</h2>
-          <p>Armani is known for his relaxed, unstructured silhouettes, use of neutral colors, and his ability to blend masculine and feminine elements. <a href="#">Read more</a></p>
-        </div>
-        <div class="recent-article">
-          <h2>Impact on Fashion:</h2>
-          <p>He is credited with softening the image of men's clothing and introducing a more powerful, yet comfortable, style for women. <a href="#">Read more</a></p>
-        </div>
-        <div class="recent-article">
-          <h2>Expansion:</h2>
-          <p>The brand has expanded to include a wide range of products and lines, including Emporio Armani, Armani Jeans, and Armani Privé. <a href="#">Read more</a></p>
-        </div>
-        <div class="recent-article">
-          <h2>Longevity:</h2>
-          <p>Now in his 90s, Armani remains actively involved in the fashion house, demonstrating a commitment to his craft and a desire to innovate while staying true to his core values. <a href="#">Read more</a></p>
-        </div>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <div>
-      <a href="#">Home</a>|
-      <a href="#">About us</a>|
-      <a href="#">Recent Articles</a>|
-      <a href="#">Email</a>|
-      <a href="#">Resources</a>|
-      <a href="#">Links</a>|
-      <a href="#">Contact us</a>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
     </div>
-    <p>&copy; 2025 Company Name. All rights reserved.</p>
-  </footer>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Doctor Appointment</h1>
+    <p>Book your appointment with ease!</p>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="date" required>
+      <button type="submit"> Appointment </button>
+    </form>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p>We know managing your health can be stressful, so we have everything in one place!</p>
+    <div class="service-cards">
+      <div class="card">
+        <img src="health care.png" alt="Health Care">
+        <h3>HEALTH CARE</h3>
+        <p>Time: 12:00 PM</p>
+        <p>Doctor name:(DR.Farhan)</p>
+      </div>
+      <div class="card">
+        <img src="opd.png" alt="OPD">
+        <h3>OPD</h3>
+        <p>Time: 02:00 PM</p>
+        <p>Doctor name:(DR.Rehan)</p>
+      </div>
+      <div class="card">
+        <img src="dental.png" alt="Dental">
+        <h3>DENTAL</h3>
+        <p>Time: 04:00 PM</p>
+        <p>Doctor name:(DR.Noman)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Doctor Appointment. All rights reserved.
+  </footer>
 
 </body>
 </html>
