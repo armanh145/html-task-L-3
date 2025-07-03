@@ -1,90 +1,74 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ebeaea;
-  margin: 0;
-  padding: 0;
-}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Header Styling */
-header {
-  background-color: #004080;
-  color: #ffffff;
-  padding: 10px;
-}
+    body {
+      height: 100vh;
+      background-color: #060606; /* dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-nav {
-  padding: 0px;
-}
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background-color: #f9f9f9;
+      border-radius: 40px;
+      padding: 20px 40px;
+      box-shadow: 0 8px 20px #b90e0e;
+      flex-wrap: wrap;
+    }
 
-nav ul {
-  background-color: #004080;
-  list-style-type: none;
-  display: flex;
-  margin: 0px;
-  padding: 0;
-}
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #060606;
+      transition: all 0.5s ease;
+    }
 
-nav li {
-    list-style: none;
-    color: #ffffff;
-}
+    .nav-item i {
+      background-color: #b90e0e;
+      padding: 10px;
+      border-radius: 50px;  
+      font-size: 24px;
+      margin-bottom: 6px;
+      color: #f9f9f9;
+      transition: all 0.5s ease;
+    }
 
-nav li a {
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0px 10px;
-    color: white;
-    text-decoration: none;
-}
+    .nav-item span {
+      font-size: 13px;
+      font-weight: 500;
+    }
 
-/* Main Content */
-main {
-  padding: 20px;
-}
+    .nav-item:hover {
+      transform: translateY(-25px);
+    }
 
-.container {
-  border: 2px solid #004080;
-  padding: 10px;
-  border-radius: 8px;         
-  background-color: #f9f9f9;
-}
+    .nav-item:hover i {
+      color: #f9f9f9;
+      text-shadow: 0 4px 10px #b90e0e;
+    }
 
-/* Recent Articles Section */
+    @media (max-width: 500px) {
+      .navbar {
+        gap: 25px;
+        padding: 15px 25px;
+      }
 
-.article-item {
-  margin-bottom: 15px;
-}
+      .nav-item i {
+        font-size: 20px;
+      }
 
-.recent-article {
-  border: 2px solid #004080;
-  padding: 20px; 
-  margin: 10px auto;    
-  border-radius: 8px;         
-  background-color: #f9f9f9;
-  flex-wrap: wrap;
-}
-
-
-/* Footer Styling */
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  margin-top: 30px;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover,
-footer a:focus {
-    color: #fff;
-    text-decoration: underline;
-}
+      .nav-item span {
+        font-size: 12px;
+      }
+    }
